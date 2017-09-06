@@ -1,5 +1,5 @@
 # DOM-BOM-homework
-DOM &amp; BOM homework for Week5 FE Cursor Education
+DOM &amp; BOM homework for Week5 FE Cursor Education <br>
 task1 - "validation": https://bohdanmirchuk.github.io/DOM-BOM-homework/
 task2 - "parallax": fix parallax https://jsfiddle.net/g2wkha1u/134/
 task3 - "os message": show message per user's system https://jsfiddle.net/snsyLb3a/75/
