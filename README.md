@@ -8,4 +8,5 @@ task5 - "stop & prevent events": what is difference between event.stopPropagatio
     ----The preventDefault() method deals with the default action that belongs to the event, for example opening the URL after clicking the link or submiting some form after clicking on the relative input. This method cancels such event ('click' in both examples) if it is cancelable.<br>
     ----The stopImmediatePropagation() method prevents other listeners from being called by the same event. So, if we have one evend and two function that have to be done after this event and the first function includes stopImmediatePropagation() method - this function will be the only that will be completed.<br><br>
     Additional tasks<br>
-    Task1.(task "player navigation") Fix the player navigation<br>
+    Task1.(task "player navigation") Fix the player navigation: https://jsfiddle.net/5038a10a/139/ <br>
+    Please, don't hold the space of enter button while firing<br>
