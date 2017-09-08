@@ -45,8 +45,8 @@ function validationMe(){
 
 
 
-    if (!Number.isInteger(Number(ageValue)) || Number(ageValue) <0 || ageValue.match(' ') || ageValue.length < 1){alert('your data is invalid (age)')};
+    if (!Number.isInteger(Number(ageValue)) || Number(ageValue) <0 || ageValue.match(' ') || ageValue.length < 1 || ageValue.match('e')){alert('your data is invalid (age)')};
 	if (!usernameValue.startsWith("user_")){alert('your data is invalid (username)')}
-	if (!moment(dateValue, "DD/MM/YYYY", true).isValid()){alert('your data is invalid (date)')}
+	if (!moment(dateValue, "DD/MM/YYYY", true).isValid() || dateValue !== moment().format("DD/MM/YYYY")){alert('your data is invalid (date)')}
 }
 
