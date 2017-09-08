@@ -10,5 +10,5 @@ task5 - "stop & prevent events": what is difference between event.stopPropagatio
     Additional tasks<br>
     Task1.(task "player navigation") Fix the player navigation: https://jsfiddle.net/5038a10a/139/ <br>
     Please, don't hold the space or enter button while firing<br>
-(task "list of users") Create the dynamic list of employees on the factory <br>
+Task2. (task "list of users") Create the dynamic list of employees on the factory <br>
 https://bohdanmirchuk.github.io/Employee-List/ <br>
