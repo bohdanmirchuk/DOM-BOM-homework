@@ -32,21 +32,44 @@ document.body.appendChild(form);
 var submit = document.querySelector('input[type="submit"]');
 submit.addEventListener('mousedown', validationMe);
 
-var date = document.querySelector('input[name="date"]');
-date.addEventListener('click', function(){
-    date.setAttribute('value', moment().format("DD/MM/YYYY"))});
+// var date = document.querySelector('input[name="date"]');
+// date.addEventListener('click', function(){
+//     date.setAttribute('value', moment().format("DD/MM/YYYY"))});
 
 function validationMe(){
 	var age = document.querySelector('input[name="age"]');
 	var ageValue = age.value;
 	var username = document.querySelector('input[name="username"]');
 	var usernameValue = username.value;
-	var dateValue = date.value;
-
+  var date = document.querySelector('input[name="date"]');
+  var dateValue = date.value;
 
 
     if (!Number.isInteger(Number(ageValue)) || Number(ageValue) <0 || ageValue.match(' ') || ageValue.length < 1 || ageValue.match('e')){alert('your data is invalid (age)')};
 	if (!usernameValue.startsWith("user_")){alert('your data is invalid (username)')}
-	if (!moment(dateValue, "DD/MM/YYYY", true).isValid() || dateValue !== moment().format("DD/MM/YYYY")){alert('your data is invalid (date)')}
+	if (!checkDateFormat(dateValue) || !checkCurrentDate(dateValue)){alert('your data is invalid (date)')}
+    return false
 }
 
+function checkDateFormat(dv){
+  var dateFormat = /^\d{1,2}\/\d{1,2}\/\d{4}$/ ;
+if(!dateFormat.test(dv)){
+  return false
+};
+return true
+}
+
+function checkCurrentDate (dv) {
+  var arr = dv.split('/');
+  var currentDate = new Date();
+  if(currentDate.getDate() != parseInt(arr[0])){
+    return false;
+  };
+  if(currentDate.getMonth() + 1 != parseInt(arr[1])){
+    return false;
+  };
+  if(currentDate.getFullYear() != parseInt(arr[2])){
+    return false;
+  };
+  return true;
+};
